@@ -13,9 +13,6 @@ const handleApiCall = (req, res) => {
     // If that isn't working, then that means you will have to wait until their servers are back up. Another solution
     // is to use a different version of their model that works like the ones found here: https://github.com/Clarifai/clarifai-javascript/blob/master/src/index.js
     // so you would change from:
-    // .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
-    // to:
-    // .predict('53e1df302c079b3db8a0a36033ed2d15', req.body.input)
     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     .then(data => {
       res.json(data);
